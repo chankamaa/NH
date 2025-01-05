@@ -1,0 +1,42 @@
+<nav class="bg-beige text-darkGreen shadow-md">
+    <div class="container mx-auto px-4 flex justify-between items-center py-4">
+      <!-- Logo -->
+      <div class="text-3xl font-bold">
+        <a href="/" class="hover:text-lightGreen">Nature Hug</a>
+      </div>
+  
+      <!-- Desktop Links -->
+      <div class="hidden md:flex space-x-8 items-center">
+        <a href="/" class="text-lg font-medium hover:text-lightGreen">Home</a>
+        <a href="/shop" class="text-lg font-medium hover:text-lightGreen">Shop</a>
+        <a href="/about" class="text-lg font-medium hover:text-lightGreen">About</a>
+        <a href="/contact" class="text-lg font-medium hover:text-lightGreen">Contact</a>
+        <!-- Cart Icon -->
+        <a href="/cart" class="flex items-center hover:text-lightGreen">
+          <img src="assets/images/cart_icon.png" alt="Cart Icon" class="w-10 h-10 ml-4">
+        </a>
+      </div>
+  
+      <!-- Mobile Menu Button -->
+      <button
+        class="md:hidden block text-darkGreen focus:outline-none"
+        (click)="toggleMenu()"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Mobile Links -->
+    <div
+      *ngIf="isMenuOpen"
+      class="md:hidden bg-lightGreen text-white px-4 py-4 space-y-4"
+    >
+      <a href="/" class="block text-lg font-medium hover:text-beige">Home</a>
+      <a href="/shop" class="block text-lg font-medium hover:text-beige">Shop</a>
+      <a href="/about" class="block text-lg font-medium hover:text-beige">About</a>
+      <a href="/contact" class="block text-lg font-medium hover:text-beige">Contact</a>
+    </div>
+  </nav>
+  
